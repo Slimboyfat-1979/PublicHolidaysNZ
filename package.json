@@ -1,0 +1,18 @@
+{
+  "name": "publicholidaysnz",
+  "version": "1.0.0",
+  "description": "An app to determine when your next public holiday is",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0"
+  }
+}
