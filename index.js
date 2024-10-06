@@ -1,14 +1,17 @@
 import express from 'express';
 import axios from 'axios';
 import bodyParser from 'body-parser';
+import dotenv from 'dotenv'
 
 const app = express();
+
 const PORT = 3000;
-const apiKey = '4211f8a417114cd0894a3666cda9d107';
+const apiKey = process.env.API_KEY;
 const URL = 'https://api.public-holidays.nz/v1/';
 
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true}));
+dotenv.config();
 
 app.get("/", async (req, res) => {
     const allHolidays = await axios.get(URL + `year?apikey=${apiKey}&year=${new Date().getFullYear()}`)

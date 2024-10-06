@@ -85,7 +85,6 @@ select {
 }
 
 
-
 table {
     position: relative;
     z-index: 1;
@@ -102,8 +101,6 @@ table tbody tr td {
     padding: 10px 0;
 }
 
-
-
 table tbody tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.5);
     color: black;
@@ -111,4 +108,30 @@ table tbody tr:nth-child(even) {
 
 table tbody tr:nth-child(odd) {
     background-color: rgba(0, 0, 0, 0.5)
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        padding-top: 50px;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    table {
+        width: 100%;
+        transform: scale(0.9);
+    }
+
+    table > * {
+        font-size: 1rem;
+    }
+
+
+    .output {
+        max-width: 80%;
+        margin: 0 auto;
+    }
 }
