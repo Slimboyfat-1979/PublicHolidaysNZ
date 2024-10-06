@@ -1,0 +1,6 @@
+<tr>
+    <td><%= h.HolidayName %></td>
+    <td><%= h.ActualDate %></td>
+    <td><%= h.ObservedDate %></td>
+    <td><%= h.Type %></td>
+</tr>

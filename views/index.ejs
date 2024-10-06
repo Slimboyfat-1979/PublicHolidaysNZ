@@ -12,11 +12,19 @@
         <div class="main">
             <div class="container">
                 <h1>Welcome to the New Zealand <br> Holiday Finder</h1>
-               <form action="/submit" method="post">
+               <form method="post">
                     <div class="input-container">
-                        <label for="">Enter Date</label>
-                        <input type="date" name="date" value="">
-                        <input type="submit">
+                        <label for="">Select Type Of Holiday</label>
+                        <select name="type" id="">
+                            <option value="both">National & Regional</option>
+                            <option value="national">National</option>
+                            <option value="regional">Regional</option>
+                        </select>
+                        <select name="year" id="">
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                        </select>
+                        <input type="submit" value="submit" formaction="/submit">
                     </div>
                </form>
             </div>
@@ -33,12 +41,14 @@
                                 </tr>
                             </thead>
                             <tbody>
+                             <% holiday.forEach(h => { %>
                                 <tr>
-                                    <td><%= holiday.HolidayName %></td>
-                                    <td><%= holiday.ActualDate %></td>
-                                    <td><%= holiday.ObservedDate %></td>
-                                    <td><%= holiday.Type %></td>
+                                    <td><%= h.HolidayName %></td>
+                                    <td><%= h.ActualDate %></td>
+                                    <td><%= h.ObservedDate %></td>
+                                    <td><%= h.Type %></td>
                                 </tr>
+                             <% }) %>
                             </tbody>
                         </table>
                     </div>
