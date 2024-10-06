@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="scripts/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+        <div class="main">
+            <div class="container">
+                <h1>Welcome to the New Zealand <br> Holiday Finder</h1>
+               <form action="/submit" method="post">
+                    <div class="input-container">
+                        <label for="">Enter Date</label>
+                        <input type="date" name="date" value="">
+                        <input type="submit">
+                    </div>
+               </form>
+            </div>
+            <% if (locals.holiday) { %>
+                <div class="output">
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Holiday Name</th>
+                                    <th>Actual Date</th>
+                                    <th>Observed Date</th>
+                                    <th>Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><%= holiday.HolidayName %></td>
+                                    <td><%= holiday.ActualDate %></td>
+                                    <td><%= holiday.ObservedDate %></td>
+                                    <td><%= holiday.Type %></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <% }else { %>
+                <div class="output"></div>
+            <% } %>  
+        </div>
+    
+</body>
+</html>
