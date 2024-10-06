@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 
 const app = express();
 const PORT = 3000;
-const apiKey = '4211f8a417114cd0894a3666cda9d107';
+const apiKey = '';
 const URL = 'https://api.public-holidays.nz/v1/';
 
 app.use(express.static("public"));
